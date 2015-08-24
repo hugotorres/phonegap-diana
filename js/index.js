@@ -16,6 +16,37 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+changePicture = function(event) {
+    event.preventDefault();
+    if (!navigator.camera) {
+        app.showAlert("Camera API not supported", "Error");
+        return;
+    }
+    var options =   {   quality: 50,
+                        destinationType: Camera.DestinationType.DATA_URL,
+                        sourceType: 1,      // 0:Photo Library, 1=Camera, 2=Saved Photo Album
+                        encodingType: 0     // 0=JPG 1=PNG
+                    };
+ 
+    navigator.camera.getPicture(
+        function(imageData) {
+            $('.employee-image', this.el).attr('src', "data:image/jpeg;base64," + imageData);
+        },
+        function() {
+            app.showAlert('Error taking picture', 'Error');
+        },
+        options);
+ 
+    return false;
+};
+
+
+ var login= function (accesToken){
+
+ 	var loginB =$('#login a');
+ 	loginB.hide();
+
+ }
  var googleapi = {
     authorize: function(options) {
         var deferred = $.Deferred();
@@ -59,6 +90,7 @@ var app = {
             redirect_uri: 'http://127.0.0.1',
             scope: 'https://www.googleapis.com/auth/analytics.readonly'
         }).done(function(data) {
+        	login(data.access_token);
             $loginStatus.html('Access Token: ' + data.access_token);
         }).fail(function(data) {
             $loginStatus.html(data.error);
