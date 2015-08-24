@@ -8,18 +8,32 @@
         <link rel="stylesheet"  href="libs/jQM-flat/jquery.mobile.flatui.css">
         <link rel="stylesheet" type="text/css" href="css/index.css" />
 
-        <title>App Name</title>
+        <title>Nail Catalog</title>
     </head>
     <body>
         <div id="app">
             <div id="home-page" data-role="page">
                 <div data-role="content" >
                     <div id="logoContainer" class="centerText">
-                            <img src="img/logo.png" id="logo"  />
+                          <a href="#home-page">  <img src="img/logo.png" id="logo"  /></a>
                         </div>
                     <div id="menu">
-                        <a data-icon="flat-heart" data-theme="d" href="#second-page" data-role="button">Second Page</a>
-                        <a data-icon="flat-time" data-theme="f" href="#due-page"  data-role="button">Fake Btn</a>
+                        <a data-icon="flat-heart" data-theme="d" href="#catalogo" data-role="button">Catalogo</a>
+                        <a data-icon="flat-time" data-theme="f" href="#login"  data-role="button">Login</a>
+                        <fieldset class="ui-grid-a">
+                            <div class="ui-block-a"> <a data-icon="flat-checkround" data-theme="e" href="#tips-page"  data-role="button">Fake Btn</a></div>
+                            <div class="ui-block-b"><a data-icon="ms-question" data-theme="g" href="#about-page"  data-role="button" >About</a></div>
+                        </fieldset>
+                    </div>
+                </div>
+            </div><!-- /page  -->
+                        <div id="catalogo" data-role="page">
+                <div data-role="content" >
+                    <div id="logoContainer" class="centerText">
+                          <a href="#home-page">  <img src="img/logo.png" id="logo"  /></a>
+                        </div>
+                    <div id="menu">
+                    
                         <fieldset class="ui-grid-a">
                             <div class="ui-block-a"> <a data-icon="flat-checkround" data-theme="e" href="#tips-page"  data-role="button">Fake Btn</a></div>
                             <div class="ui-block-b"><a data-icon="ms-question" data-theme="g" href="#about-page"  data-role="button" >About</a></div>
@@ -30,7 +44,7 @@
                 </div>
             </div><!-- /page  -->
 
-            <div  id="second-page" data-role="page">
+            <div  id="login" data-role="page">
                 <div data-role="header" data-id="header" id="header" data-position="fixed" class="ui-header">
                     <a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
                     <h1>Sample Form</h1>
