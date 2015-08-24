@@ -19,8 +19,7 @@
 
  document.addEventListener("backbutton", onBackKeyDown, false);
 
-function googlogout (e){
-	e.preventDefault();
+function googlogout(){
 
     var ref = window.open('https://accounts.google.com/Logout?continue=http://google.com', '_blank', 'hidden=yes');
     setTimeout(function() {ref.close();}, 2000);    
@@ -66,6 +65,7 @@ changePicture = function(event) {
  	var loginB =$('#login');
  	loginB.hide();
  	$('#catalogo').show();
+ 	$('#logout').show();
 
  }
  var googleapi = {
