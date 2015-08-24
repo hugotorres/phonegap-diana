@@ -4,10 +4,8 @@
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, target-densitydpi=medium-dpi" />
-
         <link rel="stylesheet"  href="libs/jQM-flat/jquery.mobile.flatui.css">
         <link rel="stylesheet" type="text/css" href="css/index.css" />
-
         <title>Nail Catalog</title>
     </head>
     <body>
@@ -18,13 +16,14 @@
                           <a href="#catalogo">  <img src="img/logo.png" id="logo"  /></a>
                         </div>
                     <div id="menu">
-                        <a data-icon="flat-heart" data-theme="d" href="#signup" data-role="button">Sign up</a>
+                        
                         <div id="login">
+                        <a data-icon="flat-heart" data-theme="d" href="#signup" data-role="button">Sign up</a>
 						  <a data-role="button" data-icon="flat-time" data-theme="f">Sign In With Google!</a>
 						  <p></p>
 						</div>
 						 <div id="catalogo" style="display:none;">
-						  <a data-role="button" href="#catalogo" data-icon="flat-time" data-theme="f">Catalogo!</a>
+						  <a data-role="button" href="#catalogo" data-icon="flat-google" data-theme="c">Catalogo</a>
 						  <p></p>
 						</div>
 
@@ -84,11 +83,11 @@
                 </div>
 	                <div data-role="content" >
 		                    	
-	                    	<div id="fotos" class="ui-grid-c">
-	                    		<div class="ui-block-a"><img src="img/catalogo/image1.png"/></div>
-	                    		<div class="ui-block-b"><img src="img/catalogo/image2.png"/></div>
-	                    		<div class="ui-block-c"><img src="img/catalogo/image3.png"/></div>
-	                    		<div class="ui-block-d"><img src="catalogo/image4.png"/></div>
+	                    	<div id="fotos" class="ui-grid-a">
+	                    		<div class="ui-block-a"><img width="100%"src="img/catalogo/image1.png"/></div>
+	                    		<div class="ui-block-a"><img width="100%"src="img/catalogo/image2.png"/></div>
+	                    		<div class="ui-block-b"><img width="100%"src="img/catalogo/image3.png"/></div>
+	                    		<div class="ui-block-b"><img width="100%"src="img/catalogo/image4.png"/></div>
 	                    	</div>
 
 
@@ -97,8 +96,62 @@
                  <div id="footer" data-role="footer" data-id="footer1" data-position="fixed" data-tap-toggle="false">
                     <div id="navbar" data-role="navbar">
                         <ul>
-                            <li><a id="map-button" href="#second-page" data-icon="flat-location" data-theme="b">Map</a></li>
-                            <li><a id="list-button" href="#list-page" data-icon="flat-menu">List</a></li>
+                            <li><a id="map-button" href="#map" data-icon="flat-location" data-theme="b">Map</a></li>
+                            <li><a id="list-button" href="#personal" data-icon="flat-menu">Personal</a></li>
+                            <li><a id="search-button" href="#home-page" data-icon="ms-search">Home</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!-- /page  -->
+
+
+            <div id="personal" data-role="page">
+                 <div data-role="header" data-id="header" id="header" data-position="fixed" class="ui-header">
+                    <a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+                    <h1>Personal</h1>
+                </div>
+	                <div data-role="content" >
+		                    	
+	                    	<div id="fotos" class="ui-grid-a">
+	                    		<div class="ui-block-a"><img width="100%"src="img/catalogo/image1.png"/></div>
+	                    		<div class="ui-block-a"><img width="100%"src="img/catalogo/image2.png"/></div>
+	                    		<div class="ui-block-b"><img width="100%"src="img/catalogo/image3.png"/></div>
+	                    		<div class="ui-block-b"><img width="100%"src="img/catalogo/image4.png"/></div>
+	                    	</div>
+
+
+
+                	</div>
+                 <div id="footer" data-role="footer" data-id="footer1" data-position="fixed" data-tap-toggle="false">
+                    <div id="navbar" data-role="navbar">
+                        <ul>
+                            <li><a id="map-button" href="#map" data-icon="flat-location" data-theme="b">Map</a></li>
+                            <li><a id="list-button" href="#personal" data-icon="flat-menu">Personal</a></li>
+                            <li><a id="search-button" href="#home-page" data-icon="ms-search">Home</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!-- /page  -->
+
+            <div id="map" data-role="page">
+                 <div data-role="header" data-id="header" id="header" data-position="fixed" class="ui-header">
+                    <a href="#home-page"  data-role="button" data-icon="arrow-l" data-inline="true" >Back</a>
+                    <h1>Ubicacion</h1>
+                </div>
+	                <div data-role="content" >
+		                    	
+	                    	<div id="mapa" >
+	                    <img src="img/mapa.jpg" width="100%"/>
+	                    	</div>
+
+
+
+                	</div>
+                 <div id="footer" data-role="footer" data-id="footer1" data-position="fixed" data-tap-toggle="false">
+                    <div id="navbar" data-role="navbar">
+                        <ul>
+                            <li><a id="map-button" href="#map" data-icon="flat-location" data-theme="b">Map</a></li>
+                            <li><a id="list-button" href="#personal" data-icon="flat-menu">Personal</a></li>
                             <li><a id="search-button" href="#home-page" data-icon="ms-search">Home</a></li>
                         </ul>
                     </div>
