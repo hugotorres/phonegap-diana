@@ -43,7 +43,7 @@ changePicture = function(event) {
 
  var login= function (accesToken){
 
- 	var loginB =$('#login a');
+ 	var loginB =$('#login');
  	loginB.hide();
 
  }

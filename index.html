@@ -18,34 +18,80 @@
                           <a href="#home-page">  <img src="img/logo.png" id="logo"  /></a>
                         </div>
                     <div id="menu">
-                        <a data-icon="flat-heart" data-theme="d" href="#catalogo" data-role="button">Catalogo</a>
+                        <a data-icon="flat-heart" data-theme="d" href="#signup" data-role="button">Sign up</a>
                         <div id="login">
 						  <a data-role="button" data-icon="flat-time" data-theme="f">Sign In With Google!</a>
 						  <p></p>
 						</div>
+						 <div id="catalogo">
+						  <a data-role="button" href="#catalogo" data-icon="flat-time" data-theme="f">Catalogo!</a>
+						  <p></p>
+						</div>
+
                         
                         <fieldset class="ui-grid-a">
-                            <div class="ui-block-a"> <a data-icon="flat-checkround" data-theme="e" href="#tips-page"  data-role="button">Fake Btn</a></div>
+                          
                             <div class="ui-block-b"><a data-icon="ms-question" data-theme="g" href="#about-page"  data-role="button" >About</a></div>
                         </fieldset>
                     </div>
                 </div>
             </div><!-- /page  -->
-                        <div id="catalogo" data-role="page">
+ 			<div id="signup" data-role="page">
+ 			 <div data-role="header" data-id="header2" data-position="fixed" class="ui-header">
+                    <a href="#" data-rel="back" data-role="button" data-icon="arrow-l" data-inline="true" >Volver</a>
+                    <h1>About App</h1>
+                </div>
                 <div data-role="content" >
-                    <div id="logoContainer" class="centerText">
-                          <a href="#home-page" >  <img src="img/logo.png" id="logo" onclick="changepicture()" /></a>
-                        </div>
-                    <div id="menu">
+                <h1>Registro de usuarios</h1>
+                   <form  id="signup-form" action="">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" name="nombre" id="nombre" data-mini="true" placeholder="fulano de tal"/>
+                        
+                        <label for="email">Email <span class="small-text">*</span></label>
+                        <input type="email" name="email" id="email" data-mini="true" placeholder="alguien@mail.com"/>
+                         <label for="password">Contraseña <span class="small-text">*</span></label>
+                        <input type="password" name="password" id="password" data-mini="true"/>
+                         <label for="passwordrepeat">Repetir contraseña <span class="small-text">*</span></label>
+                        <input type="password" name="passwordrepeat" id="passwordrepeat" data-mini="true" />
 
-                        <fieldset class="ui-grid-a">
-                            <div class="ui-block-a"> <a data-icon="flat-checkround" data-theme="e" href="#tips-page"  data-role="button">Fake Btn</a></div>
-                            <div class="ui-block-b"><a data-icon="ms-question" data-theme="g" href="#about-page"  data-role="button" >About</a></div>
+                        <div data-role="fieldcontain">
+                        <fieldset data-role="controlgroup" data-mini="true">
+                            <legend>Availability</legend>
+                            <input type="checkbox" name="checkbox-1a"    id="checkbox-1a" class="custom" checked="checked" />
+                            <label for="checkbox-1a">Morning</label>
+
+                            <input type="checkbox" name="checkbox-2a"   id="checkbox-2a" class="custom" checked="checked"/>
+                            <label for="checkbox-2a">Afternoon</label>
+
+                            <input type="checkbox" name="checkbox-3a"   id="checkbox-3a" class="custom" checked="checked" />
+                            <label for="checkbox-3a">Evening</label>
+
+                            <input type="checkbox" name="checkbox-4a"  id="checkbox-4a" class="custom" />
+                            <label for="checkbox-4a">Weekends</label>
                         </fieldset>
 
-
-                    </div>
+                        </div>
+                        <button type="submit" data-theme="f" data-mini="false" class="ui-btn-hidden" aria-disabled="false">Registrarme</button>
+                 
+                    </form>
                 </div>
+            </div><!-- /page  -->
+
+                <div id="catalogo" data-role="page">
+	                <div data-role="content" >
+	                    <div id="logoContainer" class="centerText">
+	                          <a href="#home-page" >  <img src="img/logo.png" id="logo" onclick="changepicture()" /></a>
+	                        </div>
+		                    <div id="menu">
+
+		                        <fieldset class="ui-grid-a">
+		                            <div class="ui-block-a"> <a data-icon="flat-checkround" data-theme="e" href="#tips-page"  data-role="button">Fake Btn</a></div>
+		                            <div class="ui-block-b"><a data-icon="ms-question" data-theme="g" href="#about-page"  data-role="button" >About</a></div>
+		                        </fieldset>
+
+
+	                    	</div>
+                	</div>
                  <div id="footer" data-role="footer" data-id="footer1" data-position="fixed" data-tap-toggle="false">
                     <div id="navbar" data-role="navbar">
                         <ul>
