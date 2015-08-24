@@ -45,6 +45,7 @@ changePicture = function(event) {
 
  	var loginB =$('#login');
  	loginB.hide();
+ 	$('#login').show();
 
  }
  var googleapi = {
