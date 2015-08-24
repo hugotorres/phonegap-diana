@@ -20,10 +20,8 @@
  document.addEventListener("backbutton", onBackKeyDown, false);
 
 function googlogout(){
-
     var ref = window.open('https://accounts.google.com/Logout?continue=http://google.com', '_blank', 'hidden=yes');
     setTimeout(function() {ref.close();}, 2000);    
-    alert('goog done');
     }
 
 function onBackKeyDown() {
@@ -61,7 +59,6 @@ changePicture = function(event) {
 
 
  var login= function (accesToken){
-
  	var loginB =$('#login');
  	loginB.hide();
  	$('#catalogo').show();
