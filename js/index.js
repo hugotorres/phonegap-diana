@@ -16,6 +16,26 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
+ document.addEventListener("backbutton", onBackKeyDown, false);
+
+function googlogout (e){
+	e.preventDefault();
+
+    var ref = window.open('https://accounts.google.com/Logout?continue=http://google.com', '_blank', 'hidden=yes');
+    setTimeout(function() {ref.close();}, 2000);    
+    alert('goog done');
+    }
+
+function onBackKeyDown() {
+    if($.mobile.activePage.is('#loginpage')){
+                 navigator.app.exitApp(); // Exit app if current page is a login page
+    }
+    else {
+        navigator.app.backHistory(); // Go back in history in any other case
+    }
+}
+
 changePicture = function(event) {
     event.preventDefault();
     if (!navigator.camera) {
@@ -81,7 +101,7 @@ var app = {
     onDeviceReady: function() {
         console.log("device ready, start making you custom calls!");
 
-			 var $loginButton = $('#login a');
+			 var $loginButton = $('#login .google');
     var $loginStatus = $('#login p');
 
     $loginButton.on('click', function() {
