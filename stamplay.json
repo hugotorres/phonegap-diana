@@ -1,0 +1,10 @@
+{
+  "appId": "checherapp",
+  "apiKey": "68debe146f83f744b242bb72e397436a3159fad4f2de9acc562bec968eec910e",
+  "public": "./",
+  "ignore": [
+    "stamplay.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}

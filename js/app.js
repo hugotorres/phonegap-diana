@@ -8,7 +8,7 @@ app.controller('appCtrl', ['$scope','$stamplay',
 			$scope.user = user.instance;
 		})
 	},function(err){
-		/*manage error*/
+		console.log('error al obtener usuario');
 	})
 
 	$scope.fbLogin = function(){
@@ -53,10 +53,10 @@ app.controller('appCtrl', ['$scope','$stamplay',
 		});
 	}
 
-	var partialDate= $('#data-left').data('expire-date').split("/")  
-	var date1 = new Date(parseInt(partialDate[2]), parseInt(partialDate[1])-1, parseInt(partialDate[0]));
-	var date2 = new Date()
-	var timeDiff = Math.abs(date2.getTime() - date1.getTime());
+	//var partialDate= $('#data-left').data('expire-date').split("/")  ;
+	//var date1 = new Date(parseInt(partialDate[2]), parseInt(partialDate[1])-1, parseInt(partialDate[0]));
+	var date2 = new Date();
+	var timeDiff = Math.abs(date2.getTime() - date2.getTime());
 	$scope.daysLeft  = Math.ceil(timeDiff / (1000 * 60 *60 * 24)); 
 
 	var backers = new $stamplay.Cobject('backer').Collection
@@ -65,8 +65,12 @@ app.controller('appCtrl', ['$scope','$stamplay',
 			$scope.backers = backers.instance.length;
 		})
 	}, function(err){
-		/*manage error*/
-	})
+		console.log('error al obtener backers');
+	}
+
+	
+
+	)
 
 	var funds = new $stamplay.Cobject('fund').Collection;
 	funds.limit(1).fetch().then(function(){

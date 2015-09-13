@@ -22,19 +22,50 @@
         <title>Nail Catalog</title>
     </head>
     <body id="page-top" class="index" ng-app="app" ng-controller="appCtrl">
+
+        <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '480574142123367',
+      xfbml      : true,
+      version    : 'v2.4'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
         <div id="app">
             <div id="home-page" data-role="page">
                 <div data-role="content" >
                     <div id="logoContainer" class="centerText">
                           <a href="#catalogo">  <img src="img/logo.png" id="logo"  /></a>
+                          <div
+                              class="fb-like"
+                              data-share="true"
+                              data-width="450"
+                              data-show-faces="true">
+                            </div>
                         </div>
                     <div id="menu">
                    
                         <div id="login">
-                        <a data-icon="flat-heart" data-theme="d" href="#signup" data-role="button">Sign up</a>
-						  <a class="google"data-role="button" data-icon="flat-time" data-theme="f">Sign In With Google!</a>
-						  <p></p>
+                        <a data-icon="plus" data-theme="d" href="#signup" data-role="button">Sign up</a>
+						  <a class="google"data-role="button"  data-theme="f">Sign in with Google!</a>
+                           <a ng-click="fbLogin()" ng-hide="user.dt_create" href="#">
+                        <i class="fa fa-facebook"> Login with Facebook</i></a>
+						    <data >{{backers}}</data>
 						</div>
+
+
+                        
 						 <div id="catalogo" style="display:none;">
 						  <a data-role="button" href="#catalogo" data-icon="flat-google" data-theme="c">Catalogo</a>
 						  <p></p>
@@ -51,10 +82,10 @@
  			<div id="signup" data-role="page">
  			 <div data-role="header" data-id="header2" data-position="fixed" class="ui-header">
                     <a href="#" data-rel="back" data-role="button" data-icon="arrow-l" data-inline="true" >Volver</a>
-                    <h1>About App</h1>
+                    <h1>Registro de usuarios</h1>
                 </div>
                 <div data-role="content" >
-                <h1>Registro de usuarios</h1>
+              
                    <form  id="signup-form" action="">
                         <label for="nombre">Nombre</label>
                         <input type="text" name="nombre" id="nombre" data-mini="true" placeholder="fulano de tal"/>
