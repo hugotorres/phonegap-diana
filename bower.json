@@ -1,0 +1,25 @@
+{
+  "name": "phonegap-diana",
+  "version": "1.0.0",
+  "homepage": "https://github.com/hugotorres/phonegap-diana",
+  "authors": [
+    "hugo andres torres <hugotorreslinares@outlook.com>"
+  ],
+  "description": "phonegap example",
+  "main": "index.html",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "phonegap",
+    "hugotorres"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
