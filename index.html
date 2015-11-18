@@ -57,24 +57,22 @@
                     <div id="menu">
                    
                         <div id="login">
-                        <a data-icon="plus" data-theme="d" href="#signup" data-role="button">Sign up</a>
-						  <a class="google"data-role="button"  data-theme="f">Sign in with Google!</a>
+                      <!--  <a data-icon="plus" data-theme="d" href="#signup" data-role="button">Sign up</a> -->
+						  <a class="google"data-role="button"  data-theme="f">Sign in with Facebook</a>
                            <a ng-click="fbLogin()" ng-hide="user.dt_create" href="#">
                         <i class="fa fa-facebook"> Login with Facebook</i></a>
-						    <data >{{backers}}</data>
+						  
 						</div>
-
-
                         
-						 <div id="catalogo" style="display:none;">
+						 <div id="catalogo" style="">
 						  <a data-role="button" href="#catalogo" data-icon="flat-google" data-theme="c">Catalogo</a>
 						  <p></p>
 						</div>
 
                         
                         <fieldset class="ui-grid-a">
-                          <div class="ui-block-a"><a data-icon="ms-question" data-theme="g" href="#about-page"  data-role="button" >About</a></div>
-                            <div id="logout"style="display:none;" class="ui-block-b"><a data-icon="ms-question" data-theme="g" onclick="googlogout()"  data-role="button" >log out</a></div>
+           
+                            <div id="logout "style="display:none;" class="ui-block-b"><a data-icon="ms-question" data-theme="g" onclick="googlogout()"  data-role="button" >log out</a></div>
                         </fieldset>
                     </div>
                 </div>
